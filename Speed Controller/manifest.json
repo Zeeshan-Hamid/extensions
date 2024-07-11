@@ -1,0 +1,27 @@
+{
+    "name": "YouTube Speed Controller",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "Control the speed of YouTube videos up to 10x.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "32": "icons/icon32.png",
+            "64": "icons/icon64.png"
+        }
+    },
+    "icons": {
+        "32": "icons/icon32.png",
+        "64": "icons/icon64.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
